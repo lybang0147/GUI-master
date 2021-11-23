@@ -1,0 +1,238 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{55B90FB7-3779-48C0-85C5-862467E711E2}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>MovieTheater</RootNamespace>
+    <AssemblyName>MovieTheater</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Views\AccountForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\AccountForm.Designer.cs">
+      <DependentUpon>AccountForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DAO\CinemaDB.cs" />
+    <Compile Include="DAO\FormatMovieDB.cs" />
+    <Compile Include="DAO\GenreDB.cs" />
+    <Compile Include="DAO\MovieByGenreDB.cs" />
+    <Compile Include="DAO\MovieDB.cs" />
+    <Compile Include="DAO\ScreenTypeDB.cs" />
+    <Compile Include="DAO\ShowTimeDB.cs" />
+    <Compile Include="DAO\StaffDB.cs" />
+    <Compile Include="DAO\TicketDB.cs" />
+    <Compile Include="Model\Cinema.cs" />
+    <Compile Include="Model\FormatMovie.cs" />
+    <Compile Include="Model\ScreenType.cs" />
+    <Compile Include="Model\ShowTimes.cs" />
+    <Compile Include="Model\Staff.cs" />
+    <Compile Include="Model\Ticket.cs" />
+    <Compile Include="SellerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SellerForm.Designer.cs">
+      <DependentUpon>SellerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SqlConnectionDB.cs" />
+    <Compile Include="TheatreForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TheatreForm.Designer.cs">
+      <DependentUpon>TheatreForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ScreenTypeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\ScreenTypeForm.Designer.cs">
+      <DependentUpon>ScreenTypeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\StaffForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\StaffForm.Designer.cs">
+      <DependentUpon>StaffForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TicketForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\TicketForm.Designer.cs">
+      <DependentUpon>TicketForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FormatMovieForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\FormatMovieForm.Designer.cs">
+      <DependentUpon>FormatMovieForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ShowTimeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\ShowTimeForm.Designer.cs">
+      <DependentUpon>ShowTimeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\RoomForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\RoomForm.Designer.cs">
+      <DependentUpon>RoomForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\GenreForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\GenreForm.Designer.cs">
+      <DependentUpon>GenreForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Genre.cs" />
+    <Compile Include="Model\Movie.cs" />
+    <Compile Include="Model\MovieByGenre.cs" />
+    <Compile Include="Views\MovieForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\MovieForm.Designer.cs">
+      <DependentUpon>MovieForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DAO\AccountDB.cs" />
+    <Compile Include="DAO\myDB.cs" />
+    <Compile Include="Views\DashboardForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\DashboardForm.Designer.cs">
+      <DependentUpon>DashboardForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Account.cs" />
+    <Compile Include="Views\FormLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\FormLogin.Designer.cs">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Views\AccountForm.resx">
+      <DependentUpon>AccountForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SellerForm.resx">
+      <DependentUpon>SellerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TheatreForm.resx">
+      <DependentUpon>TheatreForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ScreenTypeForm.resx">
+      <DependentUpon>ScreenTypeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\StaffForm.resx">
+      <DependentUpon>StaffForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\TicketForm.resx">
+      <DependentUpon>TicketForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FormatMovieForm.resx">
+      <DependentUpon>FormatMovieForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ShowTimeForm.resx">
+      <DependentUpon>ShowTimeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\RoomForm.resx">
+      <DependentUpon>RoomForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\GenreForm.resx">
+      <DependentUpon>GenreForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\MovieForm.resx">
+      <DependentUpon>MovieForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\DashboardForm.resx">
+      <DependentUpon>DashboardForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\FormLogin.resx">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resourses\4221419.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resourses\iconcgv.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resourses\image1-2-2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resourses\cinema-4398725_1280.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Controller\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
